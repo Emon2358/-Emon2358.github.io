@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Widget with Background</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: url("https://th.bing.com/th?id=OIP.a8sDMDgRaDU9xnQVovlBLgHaGn&w=264&h=236&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2")
+          no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      .background-container {
+        position: relative;
+        background-image: url("https://cdn.discordapp.com/attachments/1209367838696022049/1215905490236866590/1709964768584.png?ex=65fe733b&is=65ebfe3b&hm=f7dfd373a9ee9221811e210deddb7de2909216443e9e120bfc372d38b39e5c7a&");
+        background-size: 25%; /* Adjust the size of the background image */
+        background-position: center center; /* Adjust the position of the background image */
+        padding: 50px; /* Add padding for spacing */
+        border-radius: 25px; /* Add border-radius for rounded corners */
+        text-align: center;
+      }
+
+      .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        transform: translateX(-50%);
+        max-width: 21%;
+        border-radius: 100px; /* Add border-radius for rounded corners */
+      }
+
+      .widget-container {
+        max-width: 400px; /* Adjust max-width of the container */
+        width: 100%; /* Ensure the container fills the available space */
+        margin: 0 auto; /* Center the container horizontally */
+      }
+
+      iframe {
+        width: 100%; /* Adjust the width to fill the container */
+        height: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- White Background Container with Image -->
+    <div class="background-container">
+      <!-- Image Overlay -->
+      <img
+        class="image-overlay"
+        src="https://cdn.discordapp.com/attachments/1209367838696022049/1215911527752794112/IMG_3457.png?ex=65fe78da&is=65ec03da&hm=d0a4b7edd087bc1e768b6af0b52b8d157c0b9536a9e65f4c8005b2b79c810a93&"
+        alt="Overlay Image"
+      />
+
+      <!-- Discord Widget iframe -->
+      <div class="widget-container">
+        <iframe
+          src="https://discordapp.com/widget?id=1170348815941894226&channel=1192106404396400711&theme=dark"
+          allowtransparency="true"
+          frameborder="0"
+          sandbox="allow-popups allow-scripts allow-same-origin"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
